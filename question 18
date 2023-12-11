@@ -1,0 +1,71 @@
+Q 18. Create a class called Student that contains the data members like age, name, enroll_no, marks. Create another class called Faculty that contains data members like facultyName, facultyCode, salary,deptt, age, experience, gender. Create the 
+function display() in both the classes to display the respective information. The derived Class Person demonstrates multiple inheritance. The program should be able to call both the base classes and displays their information. Remove the 
+ambiguity (When we have exactly same variables or same methods in both the base classes, which one will becalled?) by proper mechanism.
+
+#include <iostream>
+#include <string>
+using namespace std,
+class Student (
+protected:
+int age.
+string name:;
+int enroll no.;
+int marks;
+public:
+Student (int a, string n, int e, int m) { 
+  Age = a;
+  Name = n;
+enroll no = e;
+ marks = m;
+}
+void display() {
+cout << "Student's name " << name << ", Age " << age <<", Enrollment Number: " << enroll no << ", Marks: << marks << endl;
+}
+};
+class Faculty {
+protected:
+  string facultyname;
+  int facultycode;
+  Int salary;
+  String deptt;
+  int age;
+int experience;
+string gender;
+
+public: 
+Faculty(string in, int fc, int s, string d, int a, int e,
+
+String g) {
+facultyName = fn;
+facultyCode = fc;
+ salary = s;
+deptt = d;
+age = a;
+experience = e;
+gender = g;
+}
+void display() {
+Cout << “Faculty’s Name: “ << facultyName << “, Faculty Code “ << facultyCode 
+           <<< “, Salary “ << salary << “, Department: “ <<
+deptt << “, Age: << age <<”, Experience: “ << experience << “, Gender: “ <<gender << endl;
+}
+};
+Class Person public Student, public Faculty {
+Public:
+Person(int a, string n, int e, int m, string fn, int fc, int s, string d, int exp, string g) 
+   :Student (a, n, e, m), Faculty (fn, fc, s, d, a, exp, g) ()
+
+Void display() {
+
+Cout << “Student Info “ << endl; 
+Student display(); cout << “Faculty Info: “ << endl;
+ Faculty display();
+}
+};
+
+int main(){
+
+person p(22, “John Doe”, 12345, 85, “Jane Doe”, 67890, 50000, “Physics”, 5, “Female”);
+p display()
+return 0;
+}
