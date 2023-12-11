@@ -1,0 +1,70 @@
+#include <iostream> 
+#include <string>
+ using namespace std;
+class Person {
+protected:
+int age;
+string name;
+public:
+Person(int a, string n) (
+age = a;
+name ni
+virtual void display() (
+cout << "Person's name: " << name <<< ", Age: " << age <<
+endl;
+}
+};
+class Student public virtual Person {
+private:
+int enroll_no;
+int marks,
+public:
+Student (int a, string n, int e, int m) Person(a, n)
+enroll no e;
+marks = m;
+}
+void display() ( Person display();
+Cout << “Student’s Enrollment Number “ << enroll_no << “,
+Marks: “ << marks << endl;
+}
+};
+class Faculty public virtual Person {
+private:
+int facultyCode;
+int salary;
+string deptt, int experience;
+string gender;
+public 
+Faculty (int a, string n, int fc, int s, string d, int e, string g) Person(a, n) {
+ facultyCode = fc;
+ salary = s;
+
+
+deptt = d;
+experience = e;
+gender = g;
+}
+void display() {
+person display();
+cout << “Faculty’s Code: “ << facultyCode << “, Salary:”
+<<< salary << “, Department “ << deptt <<< “, Experience: “ << experience << “, Gender: “ << gender << endl,
+}
+};
+class PersonWithDetails public: public Student,public Faculty {
+PersonWithDetails(int a, string n, int e, int m, int fc, int s, string d, int exp, string g)
+:Person(a, n), Student (a, n, e, m), Faculty(a, n, fc, s, d, exp, g) {}
+
+Void display() {
+ cout << “Student Info:”<<endl;
+ Student::display();
+  cout << “Faculty Info: “ << endl;
+ Faculty: display();
+}
+};
+Int main()
+
+PersonWithDetails p(22, “John Doe”, 12345, 85, 67890, 50000, “Physics”, 5, “Female”);
+ p.display();
+
+return 0;
+}
